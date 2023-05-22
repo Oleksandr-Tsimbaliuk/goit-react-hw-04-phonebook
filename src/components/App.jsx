@@ -88,27 +88,9 @@ export default function App() {
   );
   const [filter, setFilter] = useState('');
 
-  // const componentDidMount() {
-  //     const contacts = localStorage.getItem('Contacts');
-
-  //     const parsedContacts = JSON.parse(contacts);
-  //     if (parsedContacts) {
-  //       this.setState({ contacts: parsedContacts });
-  //     }
-  //   }
-
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
-
-  // const componentDidUpdate(prevProps, prevState) {
-  //   const currentContacts = this.state.contacts;
-  //   const prevContacts = prevState.contacts;
-
-  //   if (currentContacts !== prevContacts) {
-  //     localStorage.setItem('Contacts', JSON.stringify(currentContacts));
-  //   }
-  // }
 
   const handlerFormSubmit = contactData => {
     if (contacts.some(contact => contact.name === contactData.name)) {
@@ -125,7 +107,7 @@ export default function App() {
 
   const filteredContacts = () => {
     return contacts.filter(({ name }) =>
-      name.toLowerCase().includes(filter.toLowerCase())
+      name?.toLowerCase().includes(filter.toLowerCase())
     );
   };
 
