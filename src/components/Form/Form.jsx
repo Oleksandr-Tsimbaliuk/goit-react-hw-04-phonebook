@@ -9,13 +9,6 @@
 //     number: '',
 //   };
 
-//   // handleInputName = ({ target: { name, value } }) => {
-//   //   this.setState({ [name]: value });
-//   // };
-//   // handleInputNamber = ({ target: { name, value } }) => {
-//   //   this.setState({ [name]: value });
-//   // };
-
 //   handleInputName = event => [
 //     this.setState({ name: event.currentTarget.value }),
 //   ];
